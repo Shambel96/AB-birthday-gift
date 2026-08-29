@@ -34,11 +34,11 @@ export function MessageCard({ message }: { message: string }) {
         className="glass-card glow-purple mx-auto max-w-3xl rounded-4xl p-7 sm:p-12"
       >
         <h2 className="text-aurora text-center text-3xl font-bold sm:text-4xl">
-          💌 ለእርስዎ የሚሆን መልእክት
+          💌 ላንተ የሚሆን መልእክት
         </h2>
 
         <p className="mt-6 text-center text-sm tracking-[0.2em] text-cyan uppercase">
-          ልንገርዎ የሚፈልገውን ነገር አለ...
+          ልነግርህ የምፈልገው ነገር አለ...
         </p>
 
         <div className="mt-8 min-h-[22rem] text-base leading-relaxed whitespace-pre-line text-foreground/90 sm:min-h-[24rem] sm:text-lg">

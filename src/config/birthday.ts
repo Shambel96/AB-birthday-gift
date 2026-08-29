@@ -67,7 +67,7 @@ export const birthdayConfig = {
   ],
 
   /** Put an mp3 in /public/audio/ and point to it, e.g. "/audio/birthday.mp3" */
-  music: "/audio/birthday.mp3",
+  music: "/audio/birthday.m4a",
 };
 
 export type BirthdayConfig = typeof birthdayConfig;
