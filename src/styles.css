@@ -1,0 +1,218 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Midnight Celebration design system.
+ * All colors are oklch tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-midnight: var(--midnight);
+  --color-purple: var(--purple);
+  --color-pink: var(--pink);
+  --color-cyan: var(--cyan);
+  --color-gold: var(--gold);
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1.25rem;
+
+  --midnight: oklch(0.14 0.05 285);
+  --purple: oklch(0.66 0.23 305);
+  --pink: oklch(0.72 0.23 350);
+  --cyan: oklch(0.82 0.15 200);
+  --gold: oklch(0.85 0.15 85);
+
+  --background: oklch(0.13 0.045 285);
+  --foreground: oklch(0.97 0.01 300);
+  --card: oklch(0.19 0.05 288);
+  --card-foreground: oklch(0.97 0.01 300);
+  --popover: oklch(0.17 0.05 288);
+  --popover-foreground: oklch(0.97 0.01 300);
+  --primary: oklch(0.72 0.23 350);
+  --primary-foreground: oklch(0.14 0.05 285);
+  --secondary: oklch(0.26 0.07 290);
+  --secondary-foreground: oklch(0.97 0.01 300);
+  --muted: oklch(0.24 0.06 290);
+  --muted-foreground: oklch(0.76 0.04 300);
+  --accent: oklch(0.66 0.23 305);
+  --accent-foreground: oklch(0.98 0.01 300);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.98 0.01 300);
+  --border: oklch(0.98 0.01 300 / 12%);
+  --input: oklch(0.98 0.01 300 / 16%);
+  --ring: oklch(0.72 0.23 350);
+
+  --gradient-aurora: linear-gradient(
+    135deg,
+    var(--purple) 0%,
+    var(--pink) 45%,
+    var(--gold) 100%
+  );
+  --gradient-cosmos: linear-gradient(160deg, var(--cyan) 0%, var(--purple) 55%, var(--pink) 100%);
+  --glow-pink: 0 0 60px -12px color-mix(in oklab, var(--pink) 75%, transparent);
+  --glow-purple: 0 0 80px -14px color-mix(in oklab, var(--purple) 70%, transparent);
+  --glow-gold: 0 0 70px -14px color-mix(in oklab, var(--gold) 70%, transparent);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ── Utilities ─────────────────────────────── */
+
+@utility glass-card {
+  background: color-mix(in oklab, var(--card) 55%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
+  box-shadow:
+    0 24px 60px -30px oklch(0 0 0 / 80%),
+    inset 0 1px 0 color-mix(in oklab, var(--foreground) 10%, transparent);
+}
+
+@utility text-aurora {
+  background-image: var(--gradient-aurora);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-cosmos {
+  background-image: var(--gradient-cosmos);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-aurora {
+  background-image: var(--gradient-aurora);
+}
+
+@utility glow-pink {
+  box-shadow: var(--glow-pink);
+}
+
+@utility glow-purple {
+  box-shadow: var(--glow-purple);
+}
+
+@utility glow-gold {
+  box-shadow: var(--glow-gold);
+}
+
+@utility drop-glow {
+  filter: drop-shadow(0 0 22px color-mix(in oklab, var(--pink) 55%, transparent));
+}
+
+@utility section-pad {
+  padding-block: 5rem;
+  padding-inline: 1.25rem;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.12) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-18px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@utility animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@utility animate-flicker {
+  animation: flicker 0.35s ease-in-out infinite;
+}
+
+@utility animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
