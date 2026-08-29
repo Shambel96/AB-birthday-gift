@@ -17,7 +17,7 @@ export function WelcomeScreen({ onStart }: { onStart: () => void }) {
         transition={{ delay: 0.4, duration: 0.8 }}
         className="text-4xl font-light tracking-tight sm:text-6xl"
       >
-        ሄይ... 👀
+        ሰላም... 👀
       </motion.p>
 
       <motion.p
@@ -26,7 +26,7 @@ export function WelcomeScreen({ onStart }: { onStart: () => void }) {
         transition={{ delay: 1.6, duration: 0.9 }}
         className="mt-6 max-w-md text-balance text-lg text-muted-foreground sm:text-2xl"
       >
-        ለእርስዎ የተለየ ነገር አዘጋጅቼልዎታለሁ።
+        ላንተ የተለየ ነገር አዘጋጅቼልሃለሁ።
       </motion.p>
 
       <motion.button
@@ -39,7 +39,7 @@ export function WelcomeScreen({ onStart }: { onStart: () => void }) {
         className="glow-pink bg-aurora mt-14 inline-flex touch-manipulation items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-primary-foreground sm:text-lg"
       >
         <Sparkles className="h-5 w-5" />
-        አስገራሚውን ይጀምሩ
+        ሰርፕራይዙን ክፈተው
         <Sparkles className="h-5 w-5" />
       </motion.button>
 
@@ -56,7 +56,7 @@ export function WelcomeScreen({ onStart }: { onStart: () => void }) {
         transition={{ delay: 4, duration: 1 }}
         className="absolute bottom-8 text-xs tracking-[0.3em] text-muted-foreground uppercase"
       >
-        ለመጀመር ይንኩ
+        ለመጀመር ንካው
       </motion.p>
     </motion.section>
   );
