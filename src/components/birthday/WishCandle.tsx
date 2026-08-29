@@ -20,15 +20,15 @@ export function WishCandle({ onWish }: { onWish: () => void }) {
         viewport={{ once: true }}
         className="text-aurora text-3xl font-bold sm:text-5xl"
       >
-        🕯️ ምኞት ይመኙ
+        🕯️ አንድ ነገር ተመኝ
       </motion.h2>
       <p className="mt-4 max-w-md text-lg text-balance text-muted-foreground">
-        ዓይንዎን ጨፍነው፣ ምኞት ይመኙ፣ እና ሻማውን ያጥፉ...
+        ዐይንህን ጨፍን፣ ምኞትህን አስብ፣ እና ሻማውን አጥፋው...
       </p>
 
       <button
         onClick={handleBlow}
-        aria-label="ሻማውን ያጥፉ"
+        aria-label="ሻማውን አጥፋው"
         className="relative mt-14 touch-manipulation"
       >
         <AnimatePresence>
@@ -48,7 +48,7 @@ export function WishCandle({ onWish }: { onWish: () => void }) {
       </button>
 
       {!blown && (
-        <p className="mt-10 text-xs tracking-[0.3em] text-muted-foreground uppercase">ሻማውን ይንኩ</p>
+        <p className="mt-10 text-xs tracking-[0.3em] text-muted-foreground uppercase">ሻማውን ንካው</p>
       )}
 
       {/* dark veil right after blowing */}
@@ -72,8 +72,10 @@ export function WishCandle({ onWish }: { onWish: () => void }) {
             transition={{ duration: 0.8, ease: "backOut" }}
             className="mt-12"
           >
-            <p className="text-cosmos text-4xl font-bold sm:text-6xl">✨ ምኞትዎ ተልኳል ✨</p>
-            <p className="mt-4 text-lg text-muted-foreground">አሁን ሄደው እውን ያድርጉት። ❤️</p>
+            <p className="text-cosmos text-4xl font-bold sm:text-6xl">✨ ምኞትህ ተሰምቷል ✨</p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              እውን እንዲሆንልህ እመኝልሃለሁ 12 yasakalek!!❤️
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
