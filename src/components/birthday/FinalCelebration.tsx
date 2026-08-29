@@ -11,7 +11,7 @@ export function FinalCelebration({ name, onRestart }: { name: string; onRestart:
         transition={{ duration: 1.1 }}
         className="text-aurora max-w-4xl text-4xl leading-tight font-bold text-balance sm:text-7xl"
       >
-        🎂 HAPPY BIRTHDAY, {name.toUpperCase()}! 🎂
+        🎂 መልካም ልደት፣ {name.toUpperCase()}! 🎂
       </motion.h2>
 
       <motion.p
@@ -21,11 +21,11 @@ export function FinalCelebration({ name, onRestart }: { name: string; onRestart:
         transition={{ delay: 0.8, duration: 0.9 }}
         className="mt-8 text-xl text-muted-foreground sm:text-2xl"
       >
-        ይህ እስካሁን የእርስዎ ምርጥ ምዕራፍ ይሁን።
+        ይህ ዓመት ካለፉት ሁሉ ምርጡ የሕይወትህ ምዕራፍ ይሁንልህ።
       </motion.p>
 
       <div className="mt-10 space-y-1 text-lg text-foreground/80 sm:text-xl">
-        {["ተጨማሪ ፈገግታ።", "ተጨማሪ ጀብዱዎች።", "ተጨማሪ ትዝታዎች።", "ተጨማሪ ደስታ።"].map((line, i) => (
+        {["የበለጠ ፈገግታ።", "አዳዲስ ጀብዱዎች።", "ድንቅ ትዝታዎች።", "የሞላ ደስታ።"].map((line, i) => (
           <motion.p
             key={line}
             initial={{ opacity: 0, y: 14 }}
@@ -45,7 +45,7 @@ export function FinalCelebration({ name, onRestart }: { name: string; onRestart:
         className="glass-card glow-pink mt-14 inline-flex touch-manipulation items-center gap-2 rounded-full px-7 py-4 text-base font-semibold"
       >
         <Heart className="h-5 w-5 text-pink" />
-        ከመጀመሪያው ይጀምሩ
+        እንደገና እይ
       </motion.button>
     </section>
   );
