@@ -61,7 +61,7 @@ export const birthdayConfig = {
     { src: memory1, caption: "ከማልረሳቸው ምርጥ ጊዜያት አንዱ ❤️" },
     { src: memory2, caption: "ተራ ቀኖችን ሁሌም ልዩና አስደሳች የምታደርግበት መንገድ አለህ 🎈" },
     { src: memory3, caption: "የማይረሱ የሌሊት ወጎች፣ የልብ ሳቅና ምርጥ ጊዜያት 🌃" },
-    { src: memory4, caption: "ኬክ፣ ሻማና ሳቅ — የኛ አይነት ደስታ 🎂" },
+    { src: memory4, caption: "ኬክ፣ ሻማና ሳቅ — ዛሬ ምንም አይቀረንም 🎂" },
     { src: memory5, caption: "ስለ ወደፊቱ በትልቁ እያለሙ ማውራት ✨" },
     { src: memory6, caption: "ሁሉንም ነገር የሚያቀልሉ ረጅም ወጎች ☕" },
   ],

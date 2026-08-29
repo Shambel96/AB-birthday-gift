@@ -74,7 +74,7 @@ export function WishCandle({ onWish }: { onWish: () => void }) {
           >
             <p className="text-cosmos text-4xl font-bold sm:text-6xl">✨ ምኞትህ ተሰምቷል ✨</p>
             <p className="mt-4 text-lg text-muted-foreground">
-              እውን እንዲሆንልህ እመኝልሃለሁ 12 yasakalek!!❤️
+              እውን እንዲሆንልህ እመኝልሃለሁ፤ ቅዱስ ሚካኤል ያሳካልህ! ❤️
             </p>
           </motion.div>
         )}
