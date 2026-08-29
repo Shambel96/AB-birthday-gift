@@ -47,8 +47,10 @@ export function Fireworks({ active, intensity = 0.02 }: { active: boolean; inten
     };
 
     const tick = () => {
-      ctx.fillStyle = "rgba(6, 4, 16, 0.22)";
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.16)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.globalCompositeOperation = "source-over";
 
       if (Math.random() < intensity * 10) {
         explode(
