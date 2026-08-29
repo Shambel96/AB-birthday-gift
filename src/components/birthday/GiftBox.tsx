@@ -29,7 +29,7 @@ export function GiftBox({ onOpened }: { onOpened: () => void }) {
               viewport={{ once: true }}
               className="mb-12 text-xl text-muted-foreground sm:text-2xl"
             >
-              ውስጡ ምን እንደሆነ እያሰብኩ ነው... 👀
+              ውስጡ ምን እንዳለ እያሰብክ ነው? 👀
             </motion.p>
 
             <motion.button
@@ -38,7 +38,7 @@ export function GiftBox({ onOpened }: { onOpened: () => void }) {
               whileTap={{ scale: 0.95 }}
               animate={{ y: [0, -12, 0] }}
               transition={{ y: { duration: 3.2, repeat: Infinity, ease: "easeInOut" } }}
-              aria-label="ስጦታውን ይክፈቱ"
+              aria-label="ስጦታውን ክፈተው"
               className="relative touch-manipulation"
             >
               <span className="absolute inset-0 -z-10 rounded-full bg-pink/30 blur-[70px]" />
@@ -50,7 +50,7 @@ export function GiftBox({ onOpened }: { onOpened: () => void }) {
             </motion.button>
 
             <p className="mt-10 text-sm tracking-[0.25em] text-muted-foreground uppercase">
-              ስጦታውን ይንኩ
+              ስጦታውን ንካው
             </p>
           </motion.div>
         ) : (
@@ -67,9 +67,9 @@ export function GiftBox({ onOpened }: { onOpened: () => void }) {
               animate={{ scale: [0.4, 2.2, 1.4], opacity: [1, 0.5, 0.35] }}
               transition={{ duration: 1.6 }}
             />
-            <h2 className="text-aurora text-5xl font-bold sm:text-8xl">SURPRISE! 🎉</h2>
+            <h2 className="text-aurora text-5xl font-bold sm:text-8xl">እንኳን ተወለድክ! 🎉</h2>
             <p className="mt-6 max-w-md text-lg text-balance text-muted-foreground">
-              ወደ ታች ማውረድ ይቀጥሉ — የቀረው ነገር ይጠብቅዎታል።
+              ወደ ታች ዝቅ በል — ገና የሚጠብቅህ ነገር አለ።
             </p>
             {Array.from({ length: 10 }).map((_, i) => (
               <motion.span
