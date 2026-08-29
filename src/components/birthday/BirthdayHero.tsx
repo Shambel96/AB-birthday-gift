@@ -13,7 +13,7 @@ export function BirthdayHero({ name, onOpenGift }: { name: string; onOpenGift: (
         transition={{ duration: 0.7 }}
         className="text-sm font-semibold tracking-[0.35em] text-cyan uppercase sm:text-base"
       >
-        🎉 Happy Birthday 🎉
+        🎉 መልካም ልደት 🎉
       </motion.p>
 
       <motion.h1
@@ -23,7 +23,7 @@ export function BirthdayHero({ name, onOpenGift }: { name: string; onOpenGift: (
         transition={{ delay: 0.5, duration: 1.1, ease: "easeOut" }}
         className="text-aurora mt-6 max-w-4xl text-4xl leading-[1.1] font-bold text-balance sm:text-7xl"
       >
-        Happy Birthday, {name} ❤️
+        መልካም ልደት {name} ❤️
       </motion.h1>
 
       <motion.p
@@ -33,7 +33,7 @@ export function BirthdayHero({ name, onOpenGift }: { name: string; onOpenGift: (
         transition={{ delay: 1.5, duration: 0.8 }}
         className="mt-8 text-lg text-muted-foreground sm:text-xl"
       >
-        ዛሬ ሌላ ቀን ብቻ አይደለም...
+        ዛሬ ዝም ብሎ ተራ ቀን አይደለም...
       </motion.p>
       <motion.p
         initial={{ opacity: 0, y: 12 }}
@@ -42,7 +42,7 @@ export function BirthdayHero({ name, onOpenGift }: { name: string; onOpenGift: (
         transition={{ delay: 2.3, duration: 0.8 }}
         className="text-cosmos mt-2 text-2xl font-bold sm:text-4xl"
       >
-        የእርስዎ ቀን ነው!
+        ያንተ ቀን ነው!
       </motion.p>
 
       <div className="mt-14">
@@ -60,7 +60,7 @@ export function BirthdayHero({ name, onOpenGift }: { name: string; onOpenGift: (
         className="glass-card glow-purple mt-14 inline-flex touch-manipulation items-center gap-2 rounded-full px-7 py-4 text-base font-semibold sm:text-lg"
       >
         <Gift className="h-5 w-5 text-pink" />
-        ስጦታዎን ይክፈቱ
+        ስጦታህን ክፈተው
       </motion.button>
     </section>
   );
