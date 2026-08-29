@@ -39,9 +39,9 @@ export function Countdown({ birthday }: { birthday: string }) {
 
   const units = [
     { label: "ቀናት", value: remaining.days },
-    { label: "ሰዓታት", value: remaining.hours },
-    { label: "ደቂቃዎች", value: remaining.minutes },
-    { label: "ሰከንዶች", value: remaining.seconds },
+    { label: "ሰዓት", value: remaining.hours },
+    { label: "ደቂቃ", value: remaining.minutes },
+    { label: "ሰከንድ", value: remaining.seconds },
   ];
 
   return (
@@ -52,7 +52,7 @@ export function Countdown({ birthday }: { birthday: string }) {
         viewport={{ once: true }}
         className="text-aurora text-3xl font-bold sm:text-5xl"
       >
-        በዓሉ ይቀጥላል...
+        ደስታው ይቀጥላል...
       </motion.h2>
 
       {mounted && today ? (
@@ -61,7 +61,7 @@ export function Countdown({ birthday }: { birthday: string }) {
           transition={{ duration: 2.4, repeat: Infinity }}
           className="mt-10 text-2xl font-bold text-gold sm:text-4xl"
         >
-          🎉 ዛሬ የእርስዎ ቀን ነው! 🎉
+          🎉 ዛሬ ያንተ ቀን ነው! 🎉
         </motion.p>
       ) : (
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-4">
@@ -78,9 +78,7 @@ export function Countdown({ birthday }: { birthday: string }) {
         </div>
       )}
 
-      <p className="mt-8 text-sm text-muted-foreground">
-        ዓለም የሚያከብርዎበት ቀጣዩ ቀን እስኪመጣ ድረስ እየቆጠርን ነው።
-      </p>
+      <p className="mt-8 text-sm text-muted-foreground">ቀጣዩ የልደትህ ቀን እስኪደርስ ድረስ እየቆጠርን ነው ✨</p>
     </section>
   );
 }
